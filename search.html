@@ -9,7 +9,9 @@
   <link rel="stylesheet" href="./search.css">
   <script src="./jquery.min.js"></script>
   <script src="./bootstrap.min.js"></script>
+  <script src="./data.js"></script>
   <script src="./search.js"></script>
+  
 </head>
 <body>
 <nav class="navbar navbar-inverse">
@@ -26,47 +28,41 @@
   </div>
 </nav>
 <div style="clear: both;"></div>
-<div class="middiv">
-    <div class="dropdown" style="float: left;">
-      <button id="dropdown-btn" class="btn btn-default dropdown-toggle" type="button" onclick="choose(0);" data-toggle="dropdown">全部课程
-      <span class="caret"></span></button>
-      <ul id="dropdown-menu" class="dropdown-menu" role="menu" aria-labelledby="dropdown">
-      </ul>
-    </div>
-    <div style="float: left;">
-      <input type="text" class="form-control" id="keys" placeholder="课程名">
-    </div>
-    <button id="srch-btn" type="button" onclick="jump(0);" class="srch-btn btn">搜索</button>
+<div class="middiv2" style="margin-top:50px;margin-bottom:50px;">
+  <div style="float: left;">
+    <img id="deptimg" style="margin-left:100px;width:100px;height:100px;">
   </div>
-<div class="container">
-  <div class="row">
-    <div class="col-sm-6" style="background-color:yellow;">
-      <p>Lorem ipsum...</p>
-    </div>
-    <div class="col-sm-6" style="background-color:pink;">
-      <p>Sed ut perspiciatis...</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-6" style="background-color:yellow;">
-      <p>Lorem ipsum...</p>
-    </div>
-    <div class="col-sm-6" style="background-color:pink;">
-      <p>Sed ut perspiciatis...</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-4" style="background-color:yellow;">
-      <p>Lorem ipsum...</p>
-    </div>
-    <div class="col-sm-4" style="background-color:pink;">
-      <p>Sed ut perspiciatis...</p>
-    </div>
-    <div class="col-sm-4" style="background-color:pink;">
-      <p>Sed ut perspiciatis...</p>
-    </div>
+  <div style="float: left;margin-top:8px;margin-left:50px;">
+    
+    <label id="tit" class="ft1"></label><br>
+    <label  class="ft3">搜索结果</label>
   </div>
 </div>
-<div id ='data' hidden></div>
+<div class="middiv" style="margin-top:50px;margin-bottom:50px;">
+  <div class="dropdown" style="float: left;">
+    <button id="dropdown-btn" class="btn btn-default dropdown-toggle" type="button"  data-toggle="dropdown">全部课程
+    <span class="caret"></span></button>
+    <ul id="dropdown-menu" class="dropdown-menu" role="menu" aria-labelledby="dropdown">
+    </ul>
+  </div>
+  <div style="float: left;">
+    <input type="text" class="form-control" id="keys" placeholder="课程名">
+  </div>
+  <button id="srch-btn" type="button" onclick="jump(0);" class="srch-btn btn">搜索</button>
+</div>
+<div id="list" class="container">
+</div>
+<div class="container">
+  <div id="noresult" class="row" style="background-color:#595959;border-radius:5px;margin:0px 0px 15px 0px;" hidden>
+    <div class="col-sm-6" >
+      <br><br>
+      <span class="ft3">未搜索到相关课程<br><br>
+    </div>
+  </div>
+  <div>
+    <ul id="pager" class="pagination">
+    </ul>
+  </div>
+</div>
 </body>
 </html> 

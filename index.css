@@ -1,6 +1,6 @@
 ﻿body{
   min-width:600px;
-  background-color: #595959;
+  background-color: #404040;
 }
 @font-face {
     font-family: Title;
@@ -79,6 +79,37 @@
 	background:url(./bg.jpg);
 	background-size:100% auto;
 	background-repeat:no-repeat;
+}
+.ft1{
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+  font-family: Title;
+}
+.ft2{
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  font-family: Title;
+  text-align: center;
+}
+.ft3{
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Title;
+}
+.intro1{
+  margin-bottom:50px;
+  margin-top:50px;
+}
+.intro2{
+  margin-bottom:50px;
+}
+.big-img{
+  width:95%;
+  height:95%;
+  border-radius:10px;
 }
 .big-title{
 

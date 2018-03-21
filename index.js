@@ -6,6 +6,11 @@ $(document).ready(function(){
   for (var i=0;i<15;i++){
   $('#dropdown-menu').append('<li role="presentation"><a style="cursor:pointer" role="menuitem" onclick="choose('+i+')">'+dept[i]+'</a></li>');
   }
+  $('#keys').bind('keypress',function(event){ 
+    if(event.keyCode == 13){
+      jump(0);
+    }
+  });
 });
 function jump(d){
   self.location='search.html?dept='+d+'&keyword='+$('#keys').val();
@@ -13,6 +18,11 @@ function jump(d){
 function choose(d){
   $('#srch-btn').click(function(){
     jump(d);
+  });
+  $('#keys').bind('keypress',function(event){ 
+    if(event.keyCode == 13){
+      jump(d);
+    }
   });
   $('#dropdown-btn').html(dept[d]+'<span class="caret"></span>');
 }

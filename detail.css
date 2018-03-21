@@ -1,6 +1,6 @@
 ﻿body{
   min-width:600px;
-  background-color: #595959;
+  background-color: #404040;
 }
 @font-face {
     font-family: Title;
@@ -40,12 +40,12 @@
 .dropdown-toggle{
   border-radius: 4px 0px 0px 4px; 
   font-family: Title;
-  width:100px;
+  width:140px;
 }
 .form-control{
   border-radius: 0px;
   font-family: Title;
-  width:440px;
+  width:400px;
 }
 .dropdown-menu{
   font-family: Title;
@@ -66,6 +66,36 @@
   margin-left: auto;
   margin-right: auto;
 }
+.ft1{
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+  font-family: Title;
+}
+.ft2{
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  font-family: Title;
+}
+.ft3{
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Title;
+}
+.ft4{
+  color: white;
+  font-size: 16px;
+  font-family: Title;
+}
+.middiv2{
+  width:800px;
+  height:70px;
+  position:relative;
+  margin-left: auto;
+  margin-right: auto;
+}
 .srch-btn{
   border-radius: 0px 4px 4px 0px; 
   font-family: Title;
@@ -80,6 +110,27 @@
 	background-size:100% auto;
 	background-repeat:no-repeat;
 }
+.pagination{
+  margin:auto;
+}
+.pagination li a{
+  background-color: #3B3838;
+  color:white;
+}
+.pagination li a:hover{
+  background-color: white;
+  color:#3B3838;
+}
+.pagination .active a{
+  background-color: grey;
+  color:#3B3838;
+  border-color:white;
+}
+.pagination .active a:hover{
+  background-color: grey;
+  color:#3B3838;
+  border-color:white;
+} 
 .big-title{
 
   padding-top:10vw;
