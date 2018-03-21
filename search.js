@@ -1,8 +1,7 @@
 ﻿function getUrlParam(name) {
-  var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
-  var r = window.location.search.substr(1).match(reg);
-  if (r != null) return unescape(r[2]); 
-  return null;
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");   
+      var r = window.location.search.substr(1).match(reg);   
+      if (r != null) return decodeURI(r[2]); return null;   
 }
 dept=['全部课程','政治经济学部','法学部',
 '文化构想学部','文学部','教育学部','商学部',
