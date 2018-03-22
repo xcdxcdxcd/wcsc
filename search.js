@@ -71,15 +71,15 @@ function changepage(page){
 }
 function search(d, k){
   var ret=[];
-  for (var i=0;i<data.length;i++){
+  for (var i=0;i<data1.length;i++){
 
     if (d==14){
-      if (data[i][0]=='文学文构合并'||data[i][0]=='商学研究科'||data[i][0]=='创造理工研究科'){  
+      if (data1[i][0]=='文学文构合并'||data1[i][0]=='商学研究科'||data1[i][0]=='创造理工研究科'){  
         continue;
       }
       var flag=1;
       for (var x=1;x<14;x++){
-        if (data[i][0]==dept[x]){
+        if (data1[i][0]==dept[x]){
           flag=0;
           break;
         }
@@ -92,35 +92,91 @@ function search(d, k){
         
       }
       else if (d==3||d==4){
-        if (data[i][0]!=dept[d]&&data[i][0]!='文学文构合并'){
+        if (data1[i][0]!=dept[d]&&data1[i][0]!='文学文构合并'){
           continue;
         }
       }else if (d==6){
-        if (data[i][0]!=dept[d]&&data[i][0]!='商学研究科'){
+        if (data1[i][0]!=dept[d]&&data1[i][0]!='商学研究科'){
           continue;
         }
       }
       else if (d==9){
-        if (data[i][0]!=dept[d]&&data[i][0]!='创造理工研究科'){
+        if (data1[i][0]!=dept[d]&&data1[i][0]!='创造理工研究科'){
           continue;
         }
       }else{
-        if (data[i][0]!=dept[d]){
+        if (data1[i][0]!=dept[d]){
           continue;
         }
       }
     }
     if (k==''){
-      ret.push(data[i]);
+      ret.push(data1[i]);
       ids.push(i);
     }else{
-      var c=data[i][1];
+      var c=data1[i][1];
       var p=0;
       for (var j=0;j<c.length;j++){
         if (c[j].toLowerCase()==k[p].toLowerCase()) p++;
         if (p==k.length){
-          ret.push(data[i]);
+          ret.push(data1[i]);
           ids.push(i);
+          break;
+        }
+      }
+    }
+    
+  }
+  for (var i=0;i<data2.length;i++){
+
+    if (d==14){
+      if (data2[i][0]=='文学文构合并'||data2[i][0]=='商学研究科'||data2[i][0]=='创造理工研究科'){  
+        continue;
+      }
+      var flag=1;
+      for (var x=1;x<14;x++){
+        if (data2[i][0]==dept[x]){
+          flag=0;
+          break;
+        }
+      }
+      if (flag==0){
+        continue; 
+      }
+    }else{
+      if (d==0){
+        
+      }
+      else if (d==3||d==4){
+        if (data2[i][0]!=dept[d]&&data2[i][0]!='文学文构合并'){
+          continue;
+        }
+      }else if (d==6){
+        if (data2[i][0]!=dept[d]&&data2[i][0]!='商学研究科'){
+          continue;
+        }
+      }
+      else if (d==9){
+        if (data2[i][0]!=dept[d]&&data2[i][0]!='创造理工研究科'){
+          continue;
+        }
+      }else{
+        if (data2[i][0]!=dept[d]){
+          continue;
+        }
+      }
+    }
+    if (k==''){
+      ret.push(data2[i]);
+      ids.push(i+data1.length);
+    }else{
+      var c=data2[i][1];
+      var p=0;
+      for (var j=0;j<c.length;j++){
+        if (c[j].toLowerCase()==k[p].toLowerCase()) p++;
+        if (p==k.length){
+          ret.push(data2[i]);
+          ids.push(i+data1.length);
           break;
         }
       }
@@ -138,7 +194,7 @@ function setpagers(n){
     if (n!=0) $('#pager').append('<li><a onclick="changepage('+(n-1)+')"style="cursor:pointer">'+'上一页'+'</a></li>');
     for (var i=0;i<l;i++){
       if (i==n){
-        $('#pager').append('<li class="active"><a onclick="changepage('+(i)+')"style="cursor:pointer">'+i+'</a></li>');
+        $('#pager').append('<li class="active"><a onclick="changepage('+(i)+')"style="cursor:pointer">'+(i+1)+'</a></li>');
       }else{
         $('#pager').append('<li><a onclick="changepage('+(i)+')"style="cursor:pointer">'+i+'</a></li>');
       }
@@ -149,9 +205,9 @@ function setpagers(n){
     if (n<=2){
       for (var i=0;i<5;i++){
         if (i==n){
-          $('#pager').append('<li class="active"><a onclick="changepage('+(i)+')"style="cursor:pointer">'+i+'</a></li>');
+          $('#pager').append('<li class="active"><a onclick="changepage('+(i)+')"style="cursor:pointer">'+(i+1)+'</a></li>');
         }else{
-          $('#pager').append('<li><a onclick="changepage('+(i)+')"style="cursor:pointer">'+i+'</a></li>');
+          $('#pager').append('<li><a onclick="changepage('+(i)+')"style="cursor:pointer">'+(i+1)+'</a></li>');
         }
       }
       $('#pager').append('<li><a onclick="changepage('+(Math.min(l-1,n+5))+')"style="cursor:pointer">...</a></li>');
@@ -160,18 +216,18 @@ function setpagers(n){
       $('#pager').append('<li><a onclick="changepage('+(Math.max(0,n-5))+')"style="cursor:pointer">...</a></li>');
       for (var i=l-5;i<l;i++){
         if (i==n){
-          $('#pager').append('<li class="active"><a onclick="changepage('+(i)+')"style="cursor:pointer">'+i+'</a></li>');
+          $('#pager').append('<li class="active"><a onclick="changepage('+(i)+')"style="cursor:pointer">'+(i+1)+'</a></li>');
         }else{
-          $('#pager').append('<li><a onclick="changepage('+(i)+')"style="cursor:pointer">'+i+'</a></li>');
+          $('#pager').append('<li><a onclick="changepage('+(i)+')"style="cursor:pointer">'+(i+1)+'</a></li>');
         }
       }
     }else{
       $('#pager').append('<li><a onclick="changepage('+(Math.max(0,n-5))+')"style="cursor:pointer">...</a></li>');
       for (var i=n-2;i<n+3;i++){
         if (i==n){
-          $('#pager').append('<li class="active"><a onclick="changepage('+(i)+')"style="cursor:pointer">'+i+'</a></li>');
+          $('#pager').append('<li class="active"><a onclick="changepage('+(i)+')"style="cursor:pointer">'+(i+1)+'</a></li>');
         }else{
-          $('#pager').append('<li><a onclick="changepage('+(i)+')"style="cursor:pointer">'+i+'</a></li>');
+          $('#pager').append('<li><a onclick="changepage('+(i)+')"style="cursor:pointer">'+(i+1)+'</a></li>');
         }
       }
       $('#pager').append('<li><a onclick="changepage('+(Math.min(l-1,n+5))+')"style="cursor:pointer">...</a></li>');

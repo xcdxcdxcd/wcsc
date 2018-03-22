@@ -13,7 +13,12 @@ title=['担任先生','履修时间','','','','','',
 'A以上难易度','','','','','内容难易度(1-5)','内容难易度（选择原因）',
 '实用度（生活，升学，求职实用度等）','讲义','教科书','老师个人魅力（颜值，风格，态度等）',
 '老师英语能力（EDESSA）','建议，感想'];
-
+title2=['担任先生','履修时间','','','','','',
+'考试（占比，感想建议等)','出席（占比，感想建议等）',
+'作业数量(1-5)','作业难易度(1-5)','作业难易度选择原因，补充和建议',
+'A以上难易度','','','','','内容难易度(1-5)','内容难易度（选择原因）',
+'实用度（生活，升学，求职实用度等）','讲义','教科书','老师个人魅力（颜值，风格，态度等）',
+'老师英语能力（EDESSA）','建议，感想'];
 $(document).ready(function(){
   var d=getUrlParam('dept');
   if (d==14){
@@ -23,16 +28,17 @@ $(document).ready(function(){
   }
 
   var id=getUrlParam('id');
-    $('#tit').text(data[id][1]);
+  if (id<data1.length){
+    $('#tit').text(data1[id][1]);
   for (var i=0;i<25;i++){
     var dd=i+2;
     if (i>=2&&i<=6||i>=13&&i<=16){
       
     }else if (i==20){
-      if (data[id][dd]!=''){
+      if (data1[id][dd]!=''){
         var res;
-        if (data[id][dd]=='1') res='有';
-        else if (data[id][dd]=='2') res='无';
+        if (data1[id][dd]=='1') res='有';
+        else if (data1[id][dd]=='2') res='无';
         
         $('#list').append('<div class="row" style="background-color:#595959">'+
     '<div class="col-sm-12" >'+
@@ -43,10 +49,10 @@ $(document).ready(function(){
         
       }
     }else if (i==21){
-      if (data[id][dd]!=''){
+      if (data1[id][dd]!=''){
            var res;
-        if (data[id][dd]=='1') res='有教科书，有必要买';
-        else if (data[id][dd]=='2') res='有教科书，无必要买';
+        if (data1[id][dd]=='1') res='有教科书，有必要买';
+        else if (data1[id][dd]=='2') res='有教科书，无必要买';
          else res='无教科书';
         $('#list').append('<div class="row" style="background-color:#595959">'+
     '<div class="col-sm-12" >'+
@@ -57,11 +63,11 @@ $(document).ready(function(){
       }
       
     }else{
-      if (data[id][dd]!=''){
+      if (data1[id][dd]!=''){
         $('#list').append('<div class="row" style="background-color:#595959">'+
     '<div class="col-sm-12" >'+
       '<br><span class="ft3"style="border-bottom-color:white;border-bottom-style:dotted;border-width: 3px;">'+title[i]+'</span><br><br>'+
-      '<span class="ft4">&nbsp;&nbsp&nbsp'+data[id][dd]+'</span>'+
+      '<span class="ft4">&nbsp;&nbsp&nbsp'+data1[id][dd]+'</span>'+
 
     '</div></div>');
         
@@ -69,5 +75,30 @@ $(document).ready(function(){
       
     }
     
+  }
+  }else{
+    id-=data1.length
+        $('#tit').text(data2[id][1]);
+  for (var i=0;i<25;i++){
+    var dd=i+2;
+    if (i>6) dd-=3;
+    if (i>16) dd-=3;
+    if (i>=2&&i<=6||i>=13&&i<=16){
+      
+    
+    }else{
+      if (data2[id][dd]!=''){
+        $('#list').append('<div class="row" style="background-color:#595959">'+
+    '<div class="col-sm-12" >'+
+      '<br><span class="ft3"style="border-bottom-color:white;border-bottom-style:dotted;border-width: 3px;">'+title[i]+'</span><br><br>'+
+      '<span class="ft4">&nbsp;&nbsp&nbsp'+data2[id][dd]+'</span>'+
+
+    '</div></div>');
+        
+      }
+      
+    }
+    
+  }
   }
 });

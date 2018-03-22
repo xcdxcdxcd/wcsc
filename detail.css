@@ -1,5 +1,4 @@
 ﻿body{
-  min-width:600px;
   background-color: #404040;
 }
 @font-face {
@@ -54,7 +53,6 @@
   position:absolute;
   margin:auto;
   width:100%;
-  min-width:768px;
   height:40vw;
   background-color:#000000;
   opacity:0.3;
@@ -104,7 +102,6 @@
 }
 .search-container{
   width:100%;
-  min-width:768px;
   height:40vw;
 	background:url(./bg.jpg);
 	background-size:100% auto;

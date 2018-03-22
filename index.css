@@ -1,5 +1,4 @@
 ﻿body{
-  min-width:600px;
   background-color: #404040;
 }
 @font-face {
@@ -40,12 +39,12 @@
 .dropdown-toggle{
   border-radius: 4px 0px 0px 4px; 
   font-family: Title;
-  width:140px;
+  width:25vw;
 }
 .form-control{
   border-radius: 0px;
   font-family: Title;
-  width:400px;
+  width:35vw;
 }
 .dropdown-menu{
   font-family: Title;
@@ -54,13 +53,12 @@
   position:absolute;
   margin:auto;
   width:100%;
-  min-width:768px;
   height:40vw;
   background-color:#000000;
   opacity:0.3;
 }
 .middiv{
-  width:600px;
+  width:70vw;
   height:34px;
   position:relative;
   margin-left: auto;
@@ -69,12 +67,11 @@
 .srch-btn{
   border-radius: 0px 4px 4px 0px; 
   font-family: Title;
-  width:60px;
+  width:10vw;
   float:left;
 }
 .search-container{
   width:100%;
-  min-width:768px;
   height:40vw;
 	background:url(./bg.jpg);
 	background-size:100% auto;
@@ -115,13 +112,13 @@
 
   padding-top:10vw;
   padding-bottom:30px;
-  width:200px;
+  width:20vw;
   text-align: center;
   position:relative;
   margin-left: auto;
   margin-right: auto;
   color: white;
-  font-size: 96px;
+  font-size: 60px;
   font-weight: bold;
   font-family: Title;
 }
