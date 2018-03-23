@@ -62,6 +62,7 @@
   height:34px;
   position:relative;
   margin-left: auto;
+  margin-top:20px;
   margin-right: auto;
 }
 .srch-btn{
@@ -69,6 +70,7 @@
   font-family: Title;
   width:10vw;
   float:left;
+  color:white;
 }
 .search-container{
   width:100%;
