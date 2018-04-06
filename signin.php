@@ -7,8 +7,8 @@
   $dbuser = 'user';      
   $dbpass = 's951g015F';
   $conn = mysql_connect($dbhost, $dbuser, $dbpass);
-  $id=$_GET["id"];
-  $pwd=$_GET["pwd"];
+  $id=$_POST["id"];
+  $pwd=$_POST["pwd"];
   if (mysql_num_rows(mysql_query("SELECT * FROM auth where id='".$id." and password=".$pwd.";")) > 0){
     setcookie("id", $id);
     echo 'succ';

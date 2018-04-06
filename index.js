@@ -56,7 +56,7 @@ function signup(a,b,c,d,e,f,g){
                 it:d,
                 ot:e,
                 em:f,
-                dp:g
+                dp
             },  
             success:function(response){  
               alert(response);
