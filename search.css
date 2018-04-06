@@ -116,8 +116,8 @@
   color:white;
 }
 .pagination li a:hover{
-  background-color: white;
-  color:#3B3838;
+  background-color: #3B3838;
+  color:white;
 }
 .pagination .active a{
   background-color: grey;
@@ -125,9 +125,8 @@
   border-color:white;
 }
 .pagination .active a:hover{
-  background-color: grey;
-  color:#3B3838;
-  border-color:white;
+  background-color: #3B3838;
+  color:white;
 } 
 .big-title{
 
