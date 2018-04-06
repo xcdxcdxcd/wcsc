@@ -11,6 +11,7 @@ $(document).ready(function(){
       jump(0);
     }
   });
+  //TODO pages
 });
 function jump(d){
   self.location='search.html?dept='+d+'&keyword='+$('#keys').val();
@@ -25,4 +26,43 @@ function choose(d){
     }
   });
   $('#dropdown-btn').html(dept[d]+'<span class="caret"></span>');
+}
+function signin(a,b){
+  $.ajax({  
+            url:"signin.php",  
+            type:"post",  
+            dataType:"json",  
+            data:{  
+                id:a,
+                pwd:b
+            },  
+            success:function(response){  
+              alert(response);
+            },  
+            error:function() {  
+            }  
+        });  
+  
+}
+function signup(a,b,c,d,e,f,g){
+    $.ajax({  
+            url:"signin.php",  
+            type:"post",  
+            dataType:"json",  
+            data:{  
+                id:a,
+                pwd:b,
+                nm:c,
+                it:d,
+                ot:e,
+                em:f,
+                dp:g
+            },  
+            success:function(response){  
+              alert(response);
+            },  
+            error:function() {  
+            }  
+        }); 
+  
 }
