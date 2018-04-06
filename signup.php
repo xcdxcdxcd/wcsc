@@ -11,11 +11,10 @@
   $ot=$_POST["ot"];
   $em=$_POST["em"];
   $dp=$_POST["dp"];
-  echo "SELECT * FROM auth where id='".$id."';", $conn;
   if (mysql_num_rows(mysql_query("SELECT * FROM auth where id='".$id."';", $conn)) < 1){
-    //mysql_query("SELECT * FROM auth where id='".$id."';", $conn)
-    //mysql_query("INSERT INTO auth (id, name, password, intime,outtime,email,dept) VALUES ('".$id."','".$nm."','".$pwd."','".$it."','".$ot."','".$em."','".$dp."')", $conn);
-    //setcookie("id", $id);
+    
+    mysql_query("INSERT INTO auth (id, name, password, intime,outtime,email,dept) VALUES ('".$id."','".$nm."','".$pwd."','".$it."','".$ot."','".$em."','".$dp."');");
+    setcookie("id", $id);
     echo 'succ';
   }else{
     echo 'fail';
