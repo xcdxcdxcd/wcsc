@@ -11,6 +11,9 @@ $(document).ready(function(){
       jump(0);
     }
   });
+  if (getCookie('id')!=null){
+    $('#abc').hide();
+  }
   //TODO pages
 });
 function jump(d){
@@ -27,6 +30,16 @@ function choose(d){
   });
   $('#dropdown-btn').html(dept[d]+'<span class="caret"></span>');
 }
+function getCookie(name) 
+{ 
+    var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+ 
+    if(arr=document.cookie.match(reg))
+ 
+        return unescape(arr[2]); 
+    else 
+        return null; 
+} 
 function signin(a,b){
   $.ajax({  
             url:"signin.php",  
