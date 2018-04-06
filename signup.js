@@ -25,7 +25,7 @@ function signup(a,b,c,d,e,f,g){
                 alert('注册成功！');
                 window.location='index.html';
               }else{
-                alert('注册失败！请重试！');
+                alert('该账户名已经存在,请重新填写账户');
               }
             }  
         }); 
