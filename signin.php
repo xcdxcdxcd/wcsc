@@ -10,6 +10,10 @@
   
   $id=$_POST["id"];
   $pwd=$_POST["pwd"];
+  if (!$conn)
+  {
+   echo 'Could not connect: ' . mysql_error();
+  }
   echo $conn;
   echo mysql_select_db("wcsc",$conn);
   if (mysql_num_rows(mysql_query("SELECT * FROM auth where id='".$id."' and password='".$pwd."';", $conn)) > 0){
