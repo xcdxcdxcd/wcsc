@@ -15,7 +15,13 @@ function signin(a,b){
                 alert('登陆失败！密码错误或用户名不存在');
               }
             },  
-            error:function() {  
+            error:function(response) {  
+            if (respones=='succ'){
+                alert('登陆成功！');
+                window.location='index.html';
+              }else{
+                alert('登陆失败！密码错误或用户名不存在');
+              }
             }  
         });  
   

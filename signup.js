@@ -20,7 +20,13 @@ function signup(a,b,c,d,e,f,g){
                 alert('注册失败！请重试！');
               }
             },  
-            error:function() {  
+            error:function(response) {  
+            if (respones=='succ'){
+                alert('注册成功！');
+                window.location='index.html';
+              }else{
+                alert('注册失败！请重试！');
+              }
             }  
         }); 
   
