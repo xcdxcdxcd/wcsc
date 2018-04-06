@@ -46,7 +46,7 @@ function signin(a,b){
 }
 function signup(a,b,c,d,e,f,g){
     $.ajax({  
-            url:"signin.php",  
+            url:"signup.php",  
             type:"post",  
             dataType:"json",  
             data:{  
