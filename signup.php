@@ -3,6 +3,7 @@
   $dbuser = 'user';      
   $dbpass = 's951g015F';
   $conn = mysql_connect($dbhost, $dbuser, $dbpass);
+  mysql_select_db("wcsc",$con);
   $id=$_POST["id"];
   $nm=$_POST["nm"];
   $pwd=$_POST["pwd"];
