@@ -8,7 +8,7 @@ function signin(a,b){
                 pwd:b
             },  
             success:function(response){  
-               if (respones=='succ'){
+               if (response.responseText=='succ'){
                 alert('登陆成功！');
                 window.location='index.html';
               }else{
@@ -16,7 +16,7 @@ function signin(a,b){
               }
             },  
             error:function(response) {  
-            if (respones=='succ'){
+            if (response.responseText=='succ'){
                 alert('登陆成功！');
                 window.location='index.html';
               }else{

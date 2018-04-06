@@ -13,7 +13,7 @@ function signup(a,b,c,d,e,f,g){
                 dp:g
             },  
             success:function(response){  
-              if (respones=='succ'){
+              if (response.responseText=='succ'){
                 alert('注册成功！');
                 window.location='index.html';
               }else{
@@ -21,7 +21,7 @@ function signup(a,b,c,d,e,f,g){
               }
             },  
             error:function(response) {  
-            if (respones=='succ'){
+            if (response.responseText=='succ'){
                 alert('注册成功！');
                 window.location='index.html';
               }else{
