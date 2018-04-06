@@ -4,7 +4,6 @@
   $dbpass = 's951g015F';
   $conn = mysql_connect($dbhost, $dbuser, $dbpass);
   mysql_select_db("wcsc",$conn);
-  return;
   $id=$_POST["id"];
   $nm=$_POST["nm"];
   $pwd=$_POST["pwd"];
@@ -12,12 +11,11 @@
   $ot=$_POST["ot"];
   $em=$_POST["em"];
   $dp=$_POST["dp"];
-  echo "SELECT * FROM auth where id='".$id."';", $conn);
-  return;
+  echo "SELECT * FROM auth where id='".$id."';", $conn;
   if (mysql_num_rows(mysql_query("SELECT * FROM auth where id='".$id."';", $conn)) < 1){
-    mysql_query("SELECT * FROM auth where id='".$id."';", $conn)
-    mysql_query("INSERT INTO auth (id, name, password, intime,outtime,email,dept) VALUES ('".$id."','".$nm."','".$pwd."','".$it."','".$ot."','".$em."','".$dp."')", $conn);
-    setcookie("id", $id);
+    //mysql_query("SELECT * FROM auth where id='".$id."';", $conn)
+    //mysql_query("INSERT INTO auth (id, name, password, intime,outtime,email,dept) VALUES ('".$id."','".$nm."','".$pwd."','".$it."','".$ot."','".$em."','".$dp."')", $conn);
+    //setcookie("id", $id);
     echo 'succ';
   }else{
     echo 'fail';
