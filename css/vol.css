@@ -1,0 +1,213 @@
+#top{
+    background-color: rgba(156, 11, 55, 0.075);
+    margin:0;
+    padding:0;
+}
+#head{
+    margin: 0 0 20px;
+}
+#event .title1{
+    text-align: center;
+    background-color: darkgray;
+    color: white;
+    font-size: 30px;
+}
+#event .txt1{
+    margin: 0 0 20px;
+    padding: 0 250px;
+    font-size: 16px;
+}
+#event .image2{
+    padding:0 200px;
+}
+#hongyehui .title2{
+    text-align: center;
+    background-color: darkgray;
+    color: white;
+    font-size: 30px;
+}
+#hongyehui .txt2{
+    margin: 0 0 20px;
+    padding: 0 250px;
+    font-size: 16px;
+}
+#hongyehui .image3{
+    padding: 10px 200px;
+}
+#program .title3{
+    text-align: center;
+    background-color: darkgray;
+    color: white;
+    font-size: 30px;
+}
+#program .txt3{
+    padding: 0 250px;
+    font-size: 16px;
+}
+#program .image4{
+    padding: 10px 200px;
+}
+#program .image5{
+    padding: 10px 200px;
+}
+#program .image6{
+    padding: 10px 200px;
+}
+#program .image7{
+    padding: 10px 200px;
+}
+#program .image8{
+    padding: 10px 200px;
+}
+#entry .title4{
+    text-align: center;
+    background-color: darkgray;
+    color: white;
+    font-size: 30px;
+}
+#entry .txt4{
+    text-align: left;
+    padding: 0 250px;
+    font-size:16px;
+}
+#entry .txt5{
+    padding: 0 250px;
+}
+#fee .title5{
+    text-align: center;
+    background-color: darkgray;
+    color: white;
+    font-size: 30px;
+}
+#fee .txt6{
+    padding: 0 250px;
+    font-size:16px;
+}
+#fee .txt7{
+    padding: 0 250px;
+    font-size:16px;
+}
+#s2017 .title7{
+    text-align: center;
+    background-color: darkgray;
+    color: white;
+    font-size: 30px;
+}
+#s2017 .title8{
+    text-align: center;
+    font-size: 25px;
+}
+#s2017 .txt10{
+    padding: 0 250px;
+    font-size:16px;
+}
+#s2017 .image9{
+    padding: 10px 300px;
+}
+#pageTop{
+    text-align: center;
+}
+#mail{
+    text-align: center;
+}
+#entry_btn{
+    text-align: center;
+}
+
+
+
+@media screen and (max-width:1200px ) {
+#event .txt1{
+    margin: 0 0 20px;
+    padding: 0 50px;
+    font-size: 16px;
+}
+#event .image2{
+    padding:0 50px;
+} 
+
+
+#hongyehui .txt2{
+    margin: 0 0 20px;
+    padding: 0 50px;
+    font-size: 16px;
+}
+#hongyehui .image3{
+    padding: 10px 50px;
+}
+
+#program .txt3{
+    padding: 0 50px;
+    font-size: 16px;
+}
+#program .image4{
+    padding: 10px 150px;
+}
+#program .image5{
+    padding: 10px 150px;
+}
+#program .image6{
+    padding: 10px 150px;
+}
+#program .image7{
+    padding: 10px 150px;
+}
+#program .image8{
+    padding: 10px 150px;
+}
+
+
+#entry .txt4{
+    text-align: left;
+    padding: 0 50px;
+    font-size:16px;
+}
+#entry .txt5{
+    padding: 0 50px;
+}
+
+
+#fee .txt6{
+    padding: 0 50px;
+    font-size:16px;
+}
+#fee .txt7{
+    padding: 0 50px;
+    font-size:16px;
+}
+
+
+#s2017 .txt10{
+    padding: 0 50px;
+    font-size:16px;
+}
+#s2017 .image9{
+    padding: 10px 200px;
+}
+
+}
+
+
+@media screen and (max-width:900px ) {
+  #program .txt3{
+    padding: 0 20px;
+    font-size: 16px;
+}
+#program .image4{
+    padding: 10px 80px;
+}
+#program .image5{
+    padding: 10px 80px;
+}
+#program .image6{
+    padding: 10px 80px;
+}
+#program .image7{
+    padding: 10px 80px;
+}
+#program .image8{
+    padding: 10px 80px;
+}
+
+  
+}
